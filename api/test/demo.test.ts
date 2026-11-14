@@ -46,6 +46,14 @@ describe('nightly reset', () => {
     expect(await orders()).toEqual(a);
   });
 
+  it('drops rate-limit counters older than a day', async () => {
+    const old = Math.floor((NOW - 2 * 86_400_000) / 1000);
+    await env.DB.prepare('INSERT INTO hits (key, window_start, count) VALUES (?, ?, 1), (?, ?, 1)').bind('order:old', old, 'order:new', Math.floor(NOW / 1000)).run();
+    await resetDemo(env.DB, NOW, rng(3));
+    const keys = (await env.DB.prepare("SELECT key FROM hits WHERE key LIKE 'order:%'").all<{ key: string }>()).results.map(r => r.key);
+    expect(keys).toEqual(['order:new']);
+  });
+
   it('can be run by the owner only', async () => {
     const tok = async (login: string, password: string) => (await (await exports.default.fetch('http://x/api/auth/login', {
       method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': `10.5.0.${login.length}` }, body: JSON.stringify({ login, password }),

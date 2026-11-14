@@ -24,7 +24,11 @@ const PEOPLE: [string, string, string, string, string][] = [
 
 /** Wipes the week, puts the catalogue back, and writes a plausible week of orders. */
 export async function resetDemo(db: D1Database, now: number, rand: () => number): Promise<void> {
-  await db.batch([db.prepare('DELETE FROM order_lines'), db.prepare('DELETE FROM orders'), db.prepare("DELETE FROM sessions WHERE login = 'demo'")]);
+  await db.batch([
+    db.prepare('DELETE FROM order_lines'), db.prepare('DELETE FROM orders'), db.prepare("DELETE FROM sessions WHERE login = 'demo'"),
+    // rate-limit counters only matter for minutes; keep the table small
+    db.prepare('DELETE FROM hits WHERE window_start < ?').bind(Math.floor(now / 1000) - 86_400),
+  ]);
   await seed(db);
 
   const stock = new Map(ALL_SKUS.map((s, i) => [s, seedStock()[i]]));

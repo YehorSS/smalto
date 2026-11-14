@@ -24,7 +24,7 @@ function ScrollTop() {
 
 function Site() {
   const { pathname } = useLocation();
-  if (pathname.startsWith('/admin')) return <Suspense fallback={null}><Admin /></Suspense>;
+  if (pathname.startsWith('/admin')) return <Suspense fallback={null}><Routes><Route path="/admin/*" element={<Admin />} /></Routes></Suspense>;
   if (pathname === '/__stills') return <Suspense fallback={null}><Stills /></Suspense>;
   return (
     <>

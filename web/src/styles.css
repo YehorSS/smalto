@@ -86,9 +86,9 @@ button, input, select { font: inherit; color: inherit; }
 .split { display: grid; grid-template-columns: 47% 53%; }
 .stage { position: sticky; top: 0; height: 100svh; padding: 20px 0 20px 20px; }
 .stage-frame { position: relative; height: 100%; background: var(--stage); overflow: hidden; }
-.stage-frame > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.7s var(--ease); }
-.stage-frame > .on { opacity: 1; }
-.stage-frame .piece { object-fit: contain; padding: 8%; }
+.home .stage-frame > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.7s var(--ease); }
+.home .stage-frame > .on { opacity: 1; }
+.stage-frame .piece { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 8%; }
 .stage-cap { position: absolute; left: 20px; right: 20px; bottom: 18px; top: auto; height: auto; padding: 8px 12px; font-size: var(--step-small);
   background: color-mix(in srgb, var(--bg) 88%, transparent); width: auto; justify-self: start; }
 .col { padding: 0 clamp(24px, 4.5vw, 72px); min-width: 0; }
@@ -316,8 +316,11 @@ select { min-height: 40px; padding: 0 8px; border: 1px solid var(--line); backgr
   .wide-only { display: none; }
   .col { padding: 0 20px; }
   .col > section { padding: 80px 0; }
-  .hero { min-height: 0; display: block; }
-  .hero-word { font-size: 21vw; margin: -3vw 0 0 -2px; }
+  /* the phone stage is the cup only; section pictures sit inline instead */
+  .home .stage-frame > img:first-child { opacity: 1; }
+  .home .stage-frame > img:not(:first-child), .stage-cap { display: none; }
+  .hero { min-height: 0; display: flex; flex-direction: column; }
+  .hero-word { order: -1; font-size: 21vw; margin: -7vw 0 0 -2px; }
   .hero-line { margin-top: 20px; font-size: 1.1rem; }
   .inline-pic { display: block; margin-bottom: 32px; }
   .inline-pic img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--stage); }

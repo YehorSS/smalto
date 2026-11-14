@@ -42,7 +42,8 @@ export async function resetDemo(db: D1Database, now: number, rand: () => number)
     for (let k = 0; k < want; k++) {
       const s = pick(ALL_SKUS);
       const left = stock.get(s)! - (lines.get(s) ?? 0);
-      if (left > 0) lines.set(s, (lines.get(s) ?? 0) + Math.min(left, 1 + Math.floor(rand() * 2)));
+      // demo orders leave the planned sold-out and last-few glazes as they are, so the shop never looks emptied
+      if (left > 3) lines.set(s, (lines.get(s) ?? 0) + Math.min(left - 3, 1 + Math.floor(rand() * 2)));
     }
     if (!lines.size) continue;
     let c = code();

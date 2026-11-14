@@ -16,7 +16,7 @@ export function Home() {
   const credits = useCredits();
   const alt = (name: string) => credits.find(c => c.name === name)?.alt[lang] ?? '';
   const active = useActiveSection(SECTIONS);
-  const [cupGlaze, setCupGlaze] = useState<GlazeId>('turchese');
+  const [picked, setCupGlaze] = useState<GlazeId | null>(null);
   const [tab, setTab] = useState<Collection>('tavola');
   useRise();
 
@@ -25,6 +25,8 @@ export function Home() {
   const priceOf = (id: string) => products?.find(p => p.id === id)?.price ?? PIECES.find(p => p.id === id)!.price;
   const cupStock = products?.find(p => p.id === 'tazza')?.stock;
   const soldOut = (g: GlazeId) => cupStock?.[g] === 0;
+  // open on a coloured glaze that is in stock
+  const cupGlaze: GlazeId = picked ?? (['turchese', 'cobalto', 'miele', 'latte'] as GlazeId[]).find(g => !soldOut(g)) ?? 'turchese';
 
   return (
     <div className="split home">

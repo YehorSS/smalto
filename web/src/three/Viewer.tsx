@@ -74,13 +74,13 @@ export function Viewer({ piece, glaze, frozen, onReady, label }: ViewerProps) {
     const shadowTex = shadowTexture();
     const shadow = new Mesh(new PlaneGeometry(1, 1), new MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false }));
     shadow.rotation.x = -Math.PI / 2;
-    shadow.scale.setScalar(piece.size.d * s * 1.5);
+    shadow.scale.setScalar(piece.size.d * s * 1.35);
     shadow.position.y = built.group.position.y + 0.001;
     scene.add(shadow);
 
     const camera = new PerspectiveCamera(28, 1, 0.01, 20);
     const elev = ELEVATION[piece.form] ?? 0.32;
-    const dist = 2.5;
+    const dist = 3.4;
     camera.position.set(0, Math.sin(elev) * dist, Math.cos(elev) * dist);
     camera.lookAt(0, piece.form === 'plate' || piece.form === 'sideplate' || piece.form === 'dish' ? -0.05 : 0, 0);
 

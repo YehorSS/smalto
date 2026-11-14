@@ -10,6 +10,16 @@ import { admin } from './admin';
 export const app = new Hono<{ Bindings: Env }>();
 
 app.use('/api/*', corsGuard);
+
+// a fresh deploy has an empty database: fill it once, so the shop and demo login work before the first nightly reset
+let ready = false;
+app.use('/api/*', async (c, next) => {
+  if (!ready) {
+    if (!(await c.env.DB.prepare('SELECT 1 FROM products LIMIT 1').first())) await resetDemo(c.env.DB, Date.now(), Math.random);
+    ready = true;
+  }
+  await next();
+});
 app.get('/api/health', c => c.json({ ok: true }));
 app.route('/api', pub);
 app.route('/api/orders', orders);

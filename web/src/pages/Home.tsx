@@ -50,6 +50,9 @@ export function Home() {
               <span className="muted num">{CUP.name[lang]} · {money(priceOf('tazza'))}</span>
             </div>
             <span className="tiles-label" id="try">{t('hero.try')}</span>
+            <p className="tiles-now" aria-live="polite">
+              <strong>{GLAZES[cupGlaze].name[lang]}</strong> — {GLAZES[cupGlaze].note[lang]}{soldOut(cupGlaze) ? ` · ${t('shop.soldout')}` : ''}
+            </p>
             <div className="tiles" role="group" aria-labelledby="try">
               {CUP.glazes.map(g => (
                 <button key={g} type="button" className="tile" style={{ '--c': GLAZES[g].color } as React.CSSProperties}
@@ -58,9 +61,6 @@ export function Home() {
                 </button>
               ))}
             </div>
-            <p className="glaze-note" style={{ marginTop: 18 }} aria-live="polite">
-              <strong>{GLAZES[cupGlaze].name[lang]}</strong> — {GLAZES[cupGlaze].note[lang]}{soldOut(cupGlaze) ? ` · ${t('shop.soldout')}` : ''}
-            </p>
           </div>
           <h1 className="hero-word" id="hero-word">smalto</h1>
         </section>
@@ -75,12 +75,12 @@ export function Home() {
           <div role="tabpanel" id="tabpanel" aria-labelledby={`tab-${tab}`} className="rise">
             <h2 className="show-title" id="show-title">{COLLECTIONS[tab].name[lang]}</h2>
             <p className="show-desc">{COLLECTIONS[tab].note[lang]}. {t('show.count', { n: inCollection.length })}.</p>
-            <ul className="show-list">
+            <ul className="show-list rise">
               {inCollection.map(p => (
                 <li key={p.id}><Link to={`/p/${p.id}`}>{p.name[lang]}</Link><span className="num muted">{money(priceOf(p.id))}</span></li>
               ))}
             </ul>
-            <div className="cells">
+            <div className="cells rise">
               <Link to={`/shop?collection=${tab}`}>{t('show.see', { name: COLLECTIONS[tab].name[lang] })}</Link>
               <Link to="/shop">{t('show.all')}</Link>
             </div>
@@ -126,36 +126,36 @@ export function Home() {
         </section>
 
         <section id="faenza" aria-labelledby="gal-title">
-          <figure className="inline-pic"><img src={photo('mic', 800)} alt={alt('mic')} loading="lazy" /><figcaption>{alt('mic')}</figcaption></figure>
+          <figure className="inline-pic"><img src={photo('mic', 800)} alt={alt('mic')} loading="lazy" /></figure>
           <div className="gal-head rise">
             <h2 id="gal-title">{t('gal.title')}</h2>
             <span className="muted num">{t('gal.count', { n: 6 })}</span>
           </div>
-          <div className="gal" tabIndex={0} role="region" aria-label={t('gal.title')}>
+          <div className="gal rise" tabIndex={0} role="region" aria-label={t('gal.title')}>
             {GALLERY.map((g, i) => Array.isArray(g) ? (
               <figure key={i} className="pair">{g.map(n => <img key={n} src={photo(n, 800)} alt={alt(n)} loading="lazy" />)}</figure>
             ) : (
               <figure key={i} className={SHAPE[i]}><img src={photo(g, 800)} alt={alt(g)} loading="lazy" /></figure>
             ))}
           </div>
-          <ol className="gal-caps">
+          <ol className="gal-caps rise">
             {GALLERY.flat().map(n => <li key={n}>{alt(n)}</li>)}
           </ol>
         </section>
 
         <section id="faq" className="faq" aria-labelledby="faq-title">
-          <figure className="inline-pic"><img src={photo('piazza', 800)} alt={alt('piazza')} loading="lazy" /><figcaption>{alt('piazza')}</figcaption></figure>
+          <figure className="inline-pic"><img src={photo('piazza', 800)} alt={alt('piazza')} loading="lazy" /></figure>
           <h2 id="faq-title" className="rise">{t('faq.title')}</h2>
           <ul className="facts rise">
             <li>{t('faq.f1')}</li><li>{t('faq.f2')}</li><li>{t('faq.f3')}</li>
           </ul>
           {([1, 2, 3, 4, 5, 6] as const).map(n => (
-            <details key={n}>
+            <details key={n} className="rise">
               <summary>{t(`faq.q${n}`)}</summary>
               <p>{t(`faq.a${n}`)}</p>
             </details>
           ))}
-          <div className="faq-act">
+          <div className="faq-act rise">
             <Link to="/shop" className="btn">{t('hero.cta')}</Link>
             <Link to="/admin">{t('demo.admin')}</Link>
           </div>

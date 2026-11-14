@@ -1,13 +1,10 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { BASE, photo, useShop } from '../ctx';
-
-interface Credit { name: string; alt: { en: string; it: string }; creator: string; license: string; licenseUrl?: string; page: string }
+import { photo, useShop } from '../ctx';
+import { useCredits } from './hooks';
 
 export function Footer() {
   const { t, lang } = useShop();
-  const [credits, setCredits] = useState<Credit[]>([]);
-  useEffect(() => { fetch(`${BASE}photos/credits.json`).then(r => r.json()).then(setCredits, () => {}); }, []);
+  const credits = useCredits();
   return (
     <footer className="foot">
       <img className="foot-photo" src={photo('xilografia')} alt={credits.find(c => c.name === 'xilografia')?.alt[lang] ?? ''} loading="lazy" width={1600} height={1261} />

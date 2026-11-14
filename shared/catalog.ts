@@ -37,10 +37,10 @@ export interface Glaze {
 
 export const GLAZES: Record<GlazeId, Glaze> = {
   latte: { name: { en: 'Milk white', it: 'Bianco latte' }, note: { en: 'Tin-white, the classic Faenza ground', it: 'Bianco stannifero, il fondo classico di Faenza' }, color: '#eee8da', edge: '#c9b79a', roughness: 0.32, speckle: 0.35 },
-  turchese: { name: { en: 'Turquoise', it: 'Turchese' }, note: { en: 'Alkaline copper blue', it: 'Blu di rame alcalino' }, color: '#3e9f9a', edge: '#b9d8cf', roughness: 0.18, speckle: 0.1 },
-  ramina: { name: { en: 'Copper green', it: 'Verde ramina' }, note: { en: 'The green of old Faenza jugs', it: 'Il verde delle antiche brocche faentine' }, color: '#5b8a4f', edge: '#c6c58a', roughness: 0.22, speckle: 0.2 },
-  cobalto: { name: { en: 'Cobalt blue', it: 'Blu cobalto' }, note: { en: 'Deep, almost ink', it: 'Profondo, quasi inchiostro' }, color: '#22397f', edge: '#6f86c2', roughness: 0.16, speckle: 0.05 },
-  miele: { name: { en: 'Honey', it: 'Miele' }, note: { en: 'Amber, breaks brown on the rim', it: 'Ambra, vira al bruno sul bordo' }, color: '#c48a2c', edge: '#6b3f17', roughness: 0.2, speckle: 0.25 },
+  turchese: { name: { en: 'Turquoise', it: 'Turchese' }, note: { en: 'Alkaline copper blue', it: 'Blu di rame alcalino' }, color: '#3a938d', edge: '#b4d3c9', roughness: 0.18, speckle: 0.1 },
+  ramina: { name: { en: 'Copper green', it: 'Verde ramina' }, note: { en: 'The green of old Faenza jugs', it: 'Il verde delle antiche brocche faentine' }, color: '#466b3f', edge: '#b9b47a', roughness: 0.22, speckle: 0.2 },
+  cobalto: { name: { en: 'Cobalt blue', it: 'Blu cobalto' }, note: { en: 'Deep, almost ink', it: 'Profondo, quasi inchiostro' }, color: '#1c2a5e', edge: '#6a7fb8', roughness: 0.16, speckle: 0.05 },
+  miele: { name: { en: 'Honey', it: 'Miele' }, note: { en: 'Amber, breaks brown on the rim', it: 'Ambra, vira al bruno sul bordo' }, color: '#a86e25', edge: '#5e3514', roughness: 0.2, speckle: 0.25 },
   ferro: { name: { en: 'Iron', it: 'Ferro' }, note: { en: 'Satin black-brown', it: 'Nero bruno satinato' }, color: '#33261f', edge: '#8a5a3c', roughness: 0.45, speckle: 0.5 },
 };
 

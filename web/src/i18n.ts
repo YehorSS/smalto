@@ -55,6 +55,8 @@ const en = {
   'how.done': 'Your cup, ready to wrap',
   'how.doneT': '9 days',
 
+  'clip.pause': 'Pause',
+  'clip.play': 'Play',
   'gal.title': 'Faenza and its maiolica',
   'gal.count': '{n} pictures',
 
@@ -279,6 +281,8 @@ const it: Record<keyof typeof en, string> = {
   'how.done': 'La tua tazza, pronta da incartare',
   'how.doneT': '9 giorni',
 
+  'clip.pause': 'Pausa',
+  'clip.play': 'Riproduci',
   'gal.title': 'Faenza e la sua maiolica',
   'gal.count': '{n} immagini',
 

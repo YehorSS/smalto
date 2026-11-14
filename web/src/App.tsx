@@ -11,6 +11,7 @@ import { Order } from './pages/Order';
 
 const Product = lazy(() => import('./pages/Product'));
 const Admin = lazy(() => import('./admin/Admin'));
+const Stills = lazy(() => import('./pages/Stills'));
 
 function ScrollTop() {
   const { pathname, hash } = useLocation();
@@ -24,6 +25,7 @@ function ScrollTop() {
 function Site() {
   const { pathname } = useLocation();
   if (pathname.startsWith('/admin')) return <Suspense fallback={null}><Admin /></Suspense>;
+  if (pathname === '/__stills') return <Suspense fallback={null}><Stills /></Suspense>;
   return (
     <>
       <a className="skip" href="#main">Skip to content</a>

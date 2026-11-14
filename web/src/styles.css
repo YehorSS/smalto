@@ -38,6 +38,14 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+/* own scrollbar: the browser's bar is hidden, a thin glaze-coloured rail takes its place (src/ui/scrollbar.ts) */
+html.own-scroll { scrollbar-width: none; }
+html.own-scroll::-webkit-scrollbar { display: none; }
+.sb-rail { position: fixed; top: 8px; bottom: 8px; right: max(2px, env(safe-area-inset-right, 0px)); width: 18px; z-index: 30; cursor: pointer; touch-action: none; }
+.sb-rail::before { content: ''; position: absolute; top: 0; bottom: 0; right: 6px; width: 1px; background: var(--line); }
+.sb-thumb { position: absolute; top: 0; right: 5px; width: 3px; border-radius: 3px; background: var(--accent); transition: width 0.2s var(--ease), right 0.2s var(--ease); }
+.sb-rail:hover .sb-thumb, .sb-rail.drag .sb-thumb { width: 7px; right: 3px; }
+@media (pointer: coarse) { .sb-rail { display: none; } }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.55 var(--text); overflow-x: clip; }
 body.locked { overflow: hidden; }
 img, video, canvas { display: block; max-width: 100%; }

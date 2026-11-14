@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import type { Env } from './seed';
 import { fail } from './guard';
 import { requireRole, type AuthVars } from './auth';
+import { resetDemo } from './demo';
 
 type Status = 'paid' | 'packed' | 'shipped' | 'cancelled';
 const NEXT: Record<Status, Status[]> = { paid: ['packed', 'cancelled'], packed: ['shipped', 'cancelled'], shipped: [], cancelled: [] };
@@ -114,4 +115,9 @@ admin.get('/summary', async c => {
     lowStock: low.results,
     top: top.results,
   });
+});
+
+admin.post('/reset', requireRole('owner'), async c => {
+  await resetDemo(c.env.DB, Date.now(), Math.random);
+  return c.json({ ok: true });
 });

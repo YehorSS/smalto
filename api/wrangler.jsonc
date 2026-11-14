@@ -3,7 +3,7 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "d1_databases": [
-    { "binding": "DB", "database_name": "smalto-demo", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }
+    { "binding": "DB", "database_name": "smalto-demo", "database_id": "7615bf2d-4f9f-4147-98f2-bc3f0535c9f9", "migrations_dir": "migrations" }
   ],
   "triggers": { "crons": ["0 3 * * *"] }
 }

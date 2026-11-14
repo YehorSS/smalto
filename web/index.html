@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Smalto: a demo shop for a ceramics workshop in Faenza. Cups, bowls and vases with a 3D glaze preview." />
+    <meta name="color-scheme" content="light dark" />
+    <title>Smalto — ceramics from Faenza</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M7 6h18l-2 20H9z' fill='%233e9f9a'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@800&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <script>
+      // theme before first paint, so a dark-mode visitor never sees a white flash
+      try { var s = localStorage.getItem('sm-theme'); document.documentElement.dataset.theme = s === 'light' || s === 'dark' ? s : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript><p style="padding:24px;font-family:sans-serif">Smalto needs JavaScript to show the shop.</p></noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

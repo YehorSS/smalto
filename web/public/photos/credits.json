@@ -1,0 +1,183 @@
+[
+ {
+  "name": "albarello",
+  "w": 3200,
+  "h": 4000,
+  "alt": {
+   "en": "Apothecary jar, Faenza, about 1480–90",
+   "it": "Albarello da farmacia, Faenza, 1480–90 circa"
+  },
+  "creator": "Italian, Faenza maker",
+  "license": "public domain (CC0)",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.metmuseum.org/art/collection/search/460147",
+  "via": "The Metropolitan Museum of Art",
+  "title": "Apothecary jar (albarello)"
+ },
+ {
+  "name": "brocca",
+  "w": 2978,
+  "h": 3722,
+  "alt": {
+   "en": "Armorial ewer, Faenza, probably 1527",
+   "it": "Brocca con stemma, Faenza, probabilmente 1527"
+  },
+  "creator": "Italian, Faenza maker",
+  "license": "public domain (CC0)",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.metmuseum.org/art/collection/search/460149",
+  "via": "The Metropolitan Museum of Art",
+  "title": "Armorial ewer (brocca)"
+ },
+ {
+  "name": "bianco",
+  "w": 3909,
+  "h": 3176,
+  "alt": {
+   "en": "Bowl in \"Faenza white\", about 1570–80",
+   "it": "Ciotola in \"bianco di Faenza\", 1570–80 circa"
+  },
+  "creator": "Leonardo Bettisi, known as Don Pino",
+  "license": "public domain (CC0)",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.metmuseum.org/art/collection/search/190655",
+  "via": "The Metropolitan Museum of Art",
+  "title": "Bowl in \"Faenza white\" maiolica"
+ },
+ {
+  "name": "crespina",
+  "w": 3811,
+  "h": 3049,
+  "alt": {
+   "en": "Fluted dish (crespina), Faenza, about 1540–50",
+   "it": "Crespina, Faenza, 1540–50 circa"
+  },
+  "creator": "Italian, Faenza maker",
+  "license": "public domain (CC0)",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.metmuseum.org/art/collection/search/460155",
+  "via": "The Metropolitan Museum of Art",
+  "title": "Dish (crespina)"
+ },
+ {
+  "name": "mic",
+  "w": 1920,
+  "h": 1280,
+  "alt": {
+   "en": "The International Museum of Ceramics, Faenza",
+   "it": "Il Museo Internazionale delle Ceramiche, Faenza"
+  },
+  "creator": "MIC Faenza Stefania Mazzotti",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Facciata_del_MIC_-_Museo_Internazionale_delle_Ceramiche_in_Faenza.jpg",
+  "via": "Wikimedia Commons",
+  "title": "Facciata del MIC - Museo Internazionale delle Ceramiche in Faenza"
+ },
+ {
+  "name": "mazzini",
+  "w": 1920,
+  "h": 1280,
+  "alt": {
+   "en": "Corso Mazzini, Faenza",
+   "it": "Corso Mazzini, Faenza"
+  },
+  "creator": "Gianni Careddu",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Faenza,_corso_Giuseppe_Mazzini_(01).jpg",
+  "via": "Wikimedia Commons",
+  "title": "Faenza, corso Giuseppe Mazzini (01)"
+ },
+ {
+  "name": "xilografia",
+  "w": 1920,
+  "h": 1514,
+  "alt": {
+   "en": "Corso Mazzini in a woodcut, 1900",
+   "it": "Corso Mazzini in una xilografia, 1900"
+  },
+  "creator": "Unknown author",
+  "license": "public domain",
+  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Faenza_%E2%80%93_Corso_Mazzini_(xilografia).jpg",
+  "via": "Wikimedia Commons",
+  "title": "Faenza – Corso Mazzini (xilografia)"
+ },
+ {
+  "name": "piazza",
+  "w": 1920,
+  "h": 1280,
+  "alt": {
+   "en": "Piazza del Popolo and Palazzo Manfredi, Faenza",
+   "it": "Piazza del Popolo e Palazzo Manfredi, Faenza"
+  },
+  "creator": "Francesco Bini",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=160175675",
+  "via": "Wikimedia Commons",
+  "title": "Faenza, piazza del popolo, palazzo manfredi 01"
+ },
+ {
+  "name": "giardino",
+  "w": 1920,
+  "h": 1440,
+  "alt": {
+   "en": "The museum garden, Faenza",
+   "it": "Il giardino del museo, Faenza"
+  },
+  "creator": "Daniel Ventura",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Museo_Internazionale_delle_Ceramiche_in_Faenza_111.JPG",
+  "via": "Wikimedia Commons",
+  "title": "Museo Internazionale delle Ceramiche in Faenza 111"
+ },
+ {
+  "name": "tornio",
+  "w": 1920,
+  "h": 1920,
+  "alt": {
+   "en": "Throwing on the wheel (Sèvres workshop)",
+   "it": "Al tornio (laboratorio di Sèvres)"
+  },
+  "creator": "Coyau",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:S%C3%A8vres_-_Grand_atelier_-_%C3%A9bauchage_032.jpg",
+  "via": "Wikimedia Commons",
+  "title": "Sèvres - Grand atelier - ébauchage 032"
+ },
+ {
+  "name": "forno",
+  "w": 1920,
+  "h": 1280,
+  "alt": {
+   "en": "Glazed tiles stacked in a kiln before firing",
+   "it": "Piastrelle smaltate impilate nel forno prima della cottura"
+  },
+  "creator": "Dschag",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stacking_kiln_for_bulk_firing_of_one_pattern.jpg",
+  "via": "Wikimedia Commons",
+  "title": "Stacking kiln for bulk firing of one pattern"
+ },
+ {
+  "name": "wheel",
+  "video": true,
+  "w": 640,
+  "h": 480,
+  "alt": {
+   "en": "A kick wheel at work, Opishnia pottery fair",
+   "it": "Un tornio a pedale al lavoro, fiera della ceramica di Opišnja"
+  },
+  "creator": "DenysZ",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Opyshnja.ogv",
+  "via": "Wikimedia Commons",
+  "title": "Opyshnja"
+ }
+]
